@@ -39,7 +39,7 @@ export class AccountComponent implements OnInit {
       this._userService.updateUser(this.currentUser).subscribe((data: any) => {
         if(data.status != 200) {
           this.toastrService.clear();
-          this.toastrService.error("Invalid profile image url", "ERROR", {positionClass: "toast-bottom-right"});
+          this.toastrService.error("Could not update user", "ERROR", {positionClass: "toast-bottom-right"});
         } else {
           this.toastrService.clear();
           this.toastrService.success("Succesfully updated user", "Success", {positionClass: "toast-bottom-right"});
